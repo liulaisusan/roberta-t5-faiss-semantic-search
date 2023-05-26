@@ -22,8 +22,8 @@ data.drop_duplicates(subset=['CS_NAME'], inplace=True)
 data.info()
 
 model = SemanticSearch(model_name='weiterbildung', local_model=True,
-                       data_file='datasets/weiterbildung/dataset.json')
-model.create_index(index_file="course_description.index")
+                       data_file='datasets/weiterbildung/dataset.json', title_col='CS_NAME', desc_col='CS_DESC_LONG',)
+model.create_index(index_file="course_description.index", data_column="CS_NAME")
 
 app.layout = dmc.Center(
     dmc.Group(
