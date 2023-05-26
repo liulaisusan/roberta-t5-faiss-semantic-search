@@ -139,3 +139,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+/*.index
+
+/query_generator_model/pytorch_model.bin
